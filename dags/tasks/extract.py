@@ -1,8 +1,15 @@
+# extract.py
 import pandas as pd
 
-def extract(**kwargs):
-    data = {'name': ['John', 'Jane', 'Jim'], 'age': [28, 34, 29]}
+def extract():
+    # Tạo dữ liệu mẫu cho DataFrame
+    data = {
+        'customer_id': [1, 2, 3],
+        'amount_spent': [100.0, 200.0, 150.0]
+    }
     df = pd.DataFrame(data)
-    kwargs['ti'].xcom_push(key='extracted_data', value=df.to_dict())  
-    print("Extract complete!")
+    return df.to_dict(orient='records')  # Trả về dạng list of dict
 
+if __name__ == "__main__":
+    customers = extract()
+    print(customers)

@@ -1,8 +1,11 @@
-import pandas as pd
+# transform.py
+def transform(customers):
+    total_spent = sum(customer['amount_spent'] for customer in customers)
+    return total_spent
 
-def transform(**kwargs):
-    extracted_data = kwargs['ti'].xcom_pull(key='extracted_data', task_ids='extract_task')
-    df = pd.DataFrame(extracted_data)
-    df['age'] = df['age'] + 1  
-    kwargs['ti'].xcom_push(key='transformed_data', value=df.to_dict())  
-    print("Transform complete!")
+if __name__ == "__main__":
+    import extract
+
+    customers = extract.extract()
+    total_spent = transform(customers)
+    print(f"Tổng chi tiêu của khách hàng: {total_spent}")

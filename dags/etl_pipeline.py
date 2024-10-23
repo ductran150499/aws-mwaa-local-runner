@@ -1,32 +1,22 @@
 from airflow import DAG
 from airflow.decorators import dag, task
 from airflow.utils.dates import days_ago
-from tasks.extract import extract_data
-from tasks.transform import transform_data
-from tasks.load import load_data
-
-from airflow.decorators import dag, task # DAG and task decorators for interfacing with the TaskFlow API
-
+from datetime import datetime
+from tasks.extract import extract as extract_data
+from tasks.transform import transform as transform_data
+from tasks.load import load as load_data
 
 @dag(
-    # This defines how often your DAG will run, or the schedule by which your DAG runs. In this case, this DAG
-    # will run every 30 mins
     schedule_interval="@monthly",
-    # This DAG is set to run for the first time on January 1, 2021. Best practice is to use a static
-    # start_date. Subsequent DAG runs are instantiated based on scheduler_interval
     start_date=datetime(2021, 1, 1),
-    # When catchup=False, your DAG will only run for the latest schedule_interval. In this case, this means
-    # that tasks will not be run between January 1, 2021 and 30 mins ago. When turned on, this DAG's first
-    # run will be for the next 30 mins, per the schedule_interval
     catchup=False,
-    tags=['D2TH']) # If set, this tag is shown in the DAG view of the Airflow UI
+    tags=['D2TH']
+)
 def etl_google_maps_pipeline():
     """
     ### Basic ETL Dag
     This is a simple ETL data pipeline example that demonstrates the use of
     the TaskFlow API using three simple tasks for extract, transform, and load.
-    For more information on Airflow's TaskFlow API, reference documentation here:
-    https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html
     """
 
     @task()
@@ -53,7 +43,7 @@ def etl_google_maps_pipeline():
         """
         load_data(data)
 
-    
+    # Định nghĩa luồng giữa các task
     data = extract()
     transformed_data = transform(data)
     load(transformed_data)
