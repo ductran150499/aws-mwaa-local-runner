@@ -16,30 +16,7 @@
 ### 1. Install Docker
 - Follow the instructions to install Docker from the [Docker website](https://www.docker.com/).
 
----
-
-### 2. Running the Application
-
-#### 2.1. Windows:
-- Run the `docker_compose.bat` file.
-
-#### 2.2. MacOS/Linux:
-- Run the `docker_compose.sh` file.
-
----
-
-### 3. Access Minio
-- Open Minio in your browser at `localhost:9001`.
-- **Login**: 
-  - Username: `admin12345`
-  - Password: `admin12345`
-- **Create Access Keys**:
-  - Navigate to "Access Keys" in the left menu and generate new access and secret keys.
-  - Make sure to store these keys securely.
-
----
-
-### 4. Configure `keys.json`
+### 2. Configure `keys.json`
 - Create a `keys.json` file in the `plugins` directory with the following content:
 
 ```json
@@ -52,6 +29,27 @@
   "postgres_password": "airflow"
 }
 ```
+
+### 3. Running the Application
+
+#### 3.1. Windows:
+- Run the `docker_compose.bat` file.
+
+#### 3.2. MacOS/Linux:
+- Run the `docker_compose.sh` file.
+
+---
+
+### 4. Access Minio
+- Open Minio in your browser at `localhost:9001`.
+- **Login**: 
+  - Username: `admin12345`
+  - Password: `admin12345`
+- **Create Access Keys**:
+  - Navigate to "Access Keys" in the left menu and generate new access and secret keys.
+  - Make sure to store these keys securely.
+
+---
 
 ### 5. Access Airflow
 - Open Airflow in your browser at `localhost:8080`
