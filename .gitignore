@@ -1,7 +1,6 @@
-/git
-*.workspace
-dags/**/*.pyc
-/.idea
-/logs
-/db-data
+logs/
+plugins/keys.json
+minio_storage
+.idea/
+__pycache__
 .DS_Store
