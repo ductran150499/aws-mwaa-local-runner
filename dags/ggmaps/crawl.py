@@ -73,11 +73,12 @@ def scrape_google_maps(location, category, results_limit=10):
     try:
         firefox_options = Options()
         firefox_options.add_argument("--headless")
+        firefox_options.add_argument("--width=1920")
+        firefox_options.add_argument("--height=5000") 
         driver = webdriver.Remote(
             command_executor='http://remote_firefoxdriver:4444/wd/hub',
             options=firefox_options
         )
-        time.sleep(5)
         keyword = f"{category} ở {location}"
         driver.get(f"https://www.google.com/maps/search/{keyword}")
         wait = WebDriverWait(driver, 20)
@@ -107,6 +108,7 @@ def get_url(ti) -> None:
             category = categories[j]
             progress = (i * len(categories) + j + 1) / (len(locations) * len(categories))
             print(f"({progress:.2%}): Scraping {category} ở {location}")
+            time.sleep(2)
             places_data = scrape_google_maps(location, category)
             print(f"Found {len(places_data)} places")
             all_data.extend(places_data)
