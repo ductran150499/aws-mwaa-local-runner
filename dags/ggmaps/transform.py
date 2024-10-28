@@ -1,87 +1,56 @@
 from airflow.operators.python import PythonOperator
 from airflow.utils.task_group import TaskGroup
-from plugins.minio_service import create_client
-from plugins.minio_service import create_bucket_minio
+from airflow.operators.python import get_current_context
 
-def convert_to_dataframe(ti) -> None:
+def remove_duplicates(ti) -> dict:
     """
-    Converts crawled film data into a Pandas DataFrame and uploads it as a Parquet file to MinIO.
-        
-    Returns:
-        None
-    """    
-    
-    import pandas as pd
-    import io
+    Removes duplicate entries from crawled data based on a unique key
+    and pushes the unique entries to XCom as a dictionary.
 
-    minio_bucket = 'ggmaps-raw'
-    client = create_client()
-    create_bucket_minio(client=client,minio_bucket=minio_bucket)
-
-    df_value = ti.xcom_pull(key='crawl',task_ids='crawling.crawl_all')
-    df = pd.DataFrame(df_value,columns=['id', 'title', 'links', 'published_date', 'rating', 'quality', 'genre', 'short_description'])
-    df.drop_duplicates("title",inplace=True)
-
-    df_parquet = df.to_parquet(index=False)
-
-    client.put_object(
-        bucket_name=minio_bucket,
-        object_name="ggmaps_request_raw.parquet",
-        data=io.BytesIO(df_parquet),
-        length=len(df_parquet)
-    )
-
-def processing() -> None:
-    """
-    Processes the raw film data from MinIO, converting the published date and exploding genres.
+    Args:
+        ti: Task Instance to access XCom.
 
     Returns:
-        None
-    """    
+        dict: Dictionary of unique entries from crawled data.
+    """
+    # Retrieve data from XCom
+    data = ti.xcom_pull(key='crawl', task_ids='crawling.get_url')
 
-    import pandas as pd
-    import io
-    from io import BytesIO
+    if data is None or not data:
+        print("No data found in XCom.")
+        return {}
 
-    minio_bucket = 'ggmaps-raw'
-    client = create_client()
-    create_bucket_minio(client=client,minio_bucket=minio_bucket)
+    unique_data = {}
+    seen = set()
 
-    raw_ggmaps_object = client.get_object(minio_bucket, "ggmaps_request_raw.parquet")
-    df = pd.read_parquet(BytesIO(raw_ggmaps_object.read()))
-    new_df = df.copy()
-    new_df['published_date'] = pd.to_datetime(new_df['published_date'], format='%d/%m/%Y', errors='coerce')
-    processed_df = new_df.explode('genre')
-    processed_df['rating'] = processed_df['rating'].astype('float')
-    processed_minio_bucket = 'ggmaps-processed'
+    # Giả sử mỗi item trong data là một danh sách và phần tử đầu tiên là id
+    for item in data:
+        # Thay 'item[0]' bằng chỉ số thực tế cho khóa duy nhất
+        unique_key = item[0]  # Giả sử phần tử đầu tiên là khóa duy nhất
 
-    create_bucket_minio(client=client,minio_bucket=processed_minio_bucket)
+        if unique_key not in seen:  # Kiểm tra xem khóa đã được thấy chưa
+            seen.add(unique_key)
+            unique_data[unique_key] = item  # Lưu item vào dictionary với khóa duy nhất
 
-    processed_df_parquet = processed_df.to_parquet(index=False)
-    client.put_object(
-        bucket_name=processed_minio_bucket,
-        object_name="ggmaps_request_processed.parquet",
-        data=io.BytesIO(processed_df_parquet),
-        length=len(processed_df_parquet)
-    )
+    print(f"Original entries: {len(data)}, Unique entries: {len(unique_data)}")
+    print("Data after transformation:")
+    print(f"Unique entries: {unique_data}")  # In ra các entry duy nhất
 
+    # Push unique data to XCom for further use
+    ti.xcom_push(key='transformed_data', value=unique_data)
 
-def processing_tasks():
+    return unique_data  # Trả về dữ liệu duy nhất để xử lý thêm nếu cần
+
+def transform_tasks():
     with TaskGroup(
-            group_id="processing",
-            tooltip="processing dataframe"
+            group_id="transform",
+            tooltip="Transform data"
     ) as group:
 
-        convert_to_dataframe_task = PythonOperator(
-            task_id='convert_to_dataframe',
-            python_callable=convert_to_dataframe
+        remove_duplicates_task = PythonOperator(
+            task_id='remove_duplicates',
+            python_callable=remove_duplicates,
+            provide_context=True  # Đảm bảo ngữ cảnh được cung cấp để truy cập `ti`
         )
-
-        processing_task = PythonOperator(
-            task_id='processing',
-            python_callable=processing
-        )
-
-        convert_to_dataframe_task >> processing_task
 
         return group

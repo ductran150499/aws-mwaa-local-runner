@@ -1,6 +1,6 @@
 from airflow import DAG
 from ggmaps.crawl import crawl_tasks
-from ggmaps.transform import processing_tasks
+from ggmaps.transform import transform_tasks
 from dags.ggmaps.load import load_tasks
 from datetime import datetime
 
@@ -14,7 +14,7 @@ with DAG(
 
     crawl = crawl_tasks()
 
-    processing = processing_tasks()
+    processing = transform_tasks()
 
     load = load_tasks()
 
