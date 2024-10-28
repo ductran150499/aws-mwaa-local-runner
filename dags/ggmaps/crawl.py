@@ -6,8 +6,66 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-locations = ["Quận 1, TP. Hồ Chí Minh"]
-categories = ["nhà hàng", "phở"] 
+locations = [
+    "Quận 1, TP. Hồ Chí Minh",
+    "Quận 3, TP. Hồ Chí Minh",
+    "Quận 4, TP. Hồ Chí Minh",
+    "Quận 5, TP. Hồ Chí Minh",
+    "Quận 6, TP. Hồ Chí Minh",
+    "Quận 7, TP. Hồ Chí Minh",
+    "Quận 8, TP. Hồ Chí Minh",
+    "Quận 10, TP. Hồ Chí Minh",
+    "Quận 11, TP. Hồ Chí Minh",
+    "Quận 12, TP. Hồ Chí Minh",
+    
+    "TP. Thủ Đức, TP. Hồ Chí Minh",
+    
+    "Quận Bình Thạnh, TP. Hồ Chí Minh",
+    "Quận Phú Nhuận, TP. Hồ Chí Minh",
+    "Quận Tân Bình, TP. Hồ Chí Minh",
+    "Quận Tân Phú, TP. Hồ Chí Minh",
+    "Quận Gò Vấp, TP. Hồ Chí Minh",
+    "Quận Bình Tân, TP. Hồ Chí Minh",
+    
+    "Huyện Bình Chánh, TP. Hồ Chí Minh",
+    "Huyện Củ Chi, TP. Hồ Chí Minh",
+    "Huyện Hóc Môn, TP. Hồ Chí Minh",
+    "Huyện Nhà Bè, TP. Hồ Chí Minh",
+    "Huyện Cần Giờ, TP. Hồ Chí Minh",
+]
+categories = [
+    "nhà hàng",
+    "món Việt",
+    "món Hàn",
+    "món Nhật",
+    "món Trung",
+    "món Thái",
+    "món Âu",
+    "món Ấn",
+    "món chay",
+    "cà phê",
+    "phở",
+    "bánh mì",
+    "bún riêu",
+    "bún bò",
+    "bún chả",
+    "bún đậu mắm tôm",
+    "bún mắm",
+    "bún thịt nướng",
+    "quán bia",
+    "buffet",
+    "quán ăn",
+    "quán nhậu",
+    "quán nướng",
+    "quán lẩu",
+    "quán cơm",
+    "quán chay",
+    "quán ăn vặt",
+    "quán trà sữa",
+    "quán kem",
+    "quán ốc",
+    "quán chè",
+] 
 
 def scrape_google_maps(location, category, results_limit=10):
     places_data = []
@@ -21,7 +79,6 @@ def scrape_google_maps(location, category, results_limit=10):
         keyword = f"{category} in {location}"
         driver.get(f"https://www.google.com/maps/search/{keyword}")
         wait = WebDriverWait(driver, 20)
-        wait.until(EC.presence_of_element_located((By.CLASS_NAME, "bfdHYd")))
         
         wait.until(EC.presence_of_all_elements_located((By.XPATH, "//a[starts-with(@href, 'https://www.google.com/maps/place/')]")))
         
@@ -42,15 +99,15 @@ def scrape_google_maps(location, category, results_limit=10):
 
 def get_url(ti) -> None:    
     all_data = []
-    for location in locations:
-        for category in categories:
+    for i in range(len(locations)):
+        location = locations[i]
+        for j in range(len(categories)):
+            category = categories[j]
+            progress = (i * len(categories) + j) / (len(locations) * len(categories))
+            print(f"({progress:.2%}): Scraping {category} in {location}")
             places_data = scrape_google_maps(location, category)
             print(f"Found {len(places_data)} places")
             all_data.extend(places_data)
-    
-    print("Data from Google Maps:")
-    print(all_data)
-    
     # Push data to XCom
     ti.xcom_push(key='crawl', value=all_data)
 
