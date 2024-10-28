@@ -10,6 +10,7 @@ import time
 import csv
 import json
 import re
+from unidecode import unidecode
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
@@ -431,12 +432,12 @@ for i in range(len(locations)):
             places_data = scrape_google_maps(keyword, location, category)
             category_data.extend(places_data)
         
-            with open(f"ggmaps_data_{location}_{category}.json", "w", encoding='utf8') as f:
+            with open(unidecode(f"ggmaps_data_{location}_{category}.json"), "w", encoding='utf8') as f:
                 json.dump(places_data, f, indent=4, ensure_ascii=False)
         
         all_data.extend(category_data)
         
-        with open(f"ggmaps_data_{location}.json", "w", encoding='utf8') as f:
+        with open(unidecode(f"ggmaps_data_{location}.json"), "w", encoding='utf8') as f:
             json.dump(category_data, f, indent=4, ensure_ascii=False)
 
 with open(f"ggmaps_data_final.json", "w", encoding='utf8') as f:
