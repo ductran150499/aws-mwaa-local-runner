@@ -384,7 +384,7 @@ locations = [
     "Huyện Cần Giờ, TP. Hồ Chí Minh",
 ]
 
-unique_categories = [
+categories = [
     "nhà hàng",
     "món Việt",
     "món Hàn",
