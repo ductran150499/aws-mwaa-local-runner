@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time as time
 
 locations = [
     "Quận 1, TP. Hồ Chí Minh",
@@ -76,6 +77,7 @@ def scrape_google_maps(location, category, results_limit=10):
             command_executor='http://remote_firefoxdriver:4444/wd/hub',
             options=firefox_options
         )
+        time.sleep(5)
         keyword = f"{category} ở {location}"
         driver.get(f"https://www.google.com/maps/search/{keyword}")
         wait = WebDriverWait(driver, 20)

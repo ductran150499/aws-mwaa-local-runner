@@ -33,7 +33,7 @@ services:
     container_name: remote_firefoxdriver
     image: selenium/standalone-firefox
     environment:
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - MOZ_HEADLESS=1
       - SE_NODE_MAX_SESSIONS=5
       - JAVA_OPTS=-XX:ActiveProcessorCount=5
     ports:
