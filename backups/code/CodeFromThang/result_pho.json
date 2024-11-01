@@ -1,0 +1,1071 @@
+{
+    "title": "Phở gia truyền Nam Định",
+    "address": "140B Đ. Nguyễn Cư Trinh, Phường Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh",
+    "lat_long": {
+        "latitude": "10.7636698",
+        "longitude": "106.6890646"
+    },
+    "opening_hours": {
+        "Saturday": [
+            "6 AM to 12 AM"
+        ],
+        "Sunday": [
+            "6 AM to 12 AM"
+        ],
+        "Monday": [
+            "6 AM to 12 AM"
+        ],
+        "Tuesday": [
+            "6 AM to 12 AM"
+        ],
+        "Wednesday": [
+            "6 AM to 12 AM"
+        ],
+        "Thursday": [
+            "6 AM to 12 AM"
+        ],
+        "Friday": [
+            "6 AM to 12 AM"
+        ]
+    },
+    "price_info": [
+        {
+            "currency": "đ",
+            "price_range": "₫1–100,000",
+            "percentage": "90%"
+        },
+        {
+            "currency": "đ",
+            "price_range": "₫100,000–200,000",
+            "percentage": "5%"
+        },
+        {
+            "currency": "đ",
+            "price_range": "₫200,000–300,000",
+            "percentage": "5%"
+        }
+    ],
+    "review_stats": {
+        "rate": "4.1",
+        "reviews": "194",
+        "detail": {
+            "5 stars": "92 reviews",
+            "4 stars": "55 reviews",
+            "3 stars": "34 reviews",
+            "2 stars": "7 reviews",
+            "1 stars": "6 reviews"
+        }
+    },
+    "additional_info": {
+        "Accessibility": [
+            "No wheelchair-accessible car park",
+            "No wheelchair-accessible entrance",
+            "No wheelchair-accessible seating"
+        ],
+        "Service options": [
+            "Offers delivery",
+            "Offers takeaway",
+            "Serves dine-in"
+        ],
+        "Dining options": [
+            "Serves breakfast",
+            "Serves brunch",
+            "Serves lunch",
+            "Serves dinner",
+            "Has catering"
+        ],
+        "Amenities": [
+            "Has toilets"
+        ],
+        "Atmosphere": [
+            "Casual"
+        ],
+        "Children": [
+            "Good for kids"
+        ],
+        "Parking": [
+            "Free parking lot",
+            "Plenty of parking"
+        ]
+    },
+    "most_relevant_reviews": [
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "Gary Chang",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The Pho (Noodles) is good. The soup is amazing. Have it on a rainy day will be best.\nReasonable price and many locals eat here.\n\nA good stop over for a quick bite."
+        },
+        {
+            "name": "Jane",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Lots of local come here for breakfast and so did I. Light hearty broth with tender beef. Broth could have been more beefy, just my own preference though. Otherwise I love how there’s AC while you slurp on the yummy hot noodles!"
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Star Carter",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The chicken pho soup is tasty not masked by excess seasoning and spices, can clearly taste the sweetness and flavour of chicken. The pho or rice noodle texture is very good too, long strands of pho, cooked just right to retain slight chewiness and bounce in the noodle. The chicken meat is tender and moist too. However, the shop is quite messy and the kitchen doesn’t look sanitary, the staff who prepared our noodle was smoking and he did not wash his hands before grabbing the ingredients with his bare hands."
+        },
+        {
+            "name": "Lawrence Ooley",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Good bowl of phở gà, reasonably priced, especially for D1. Only complaints were that there was not as much chicken in the soup as I would have liked,  and received only Thai basil as garnishments. Usually get sprouts and Sawtooth herb. They did have sliced garlic cloves, chilies and jalapeños however. The noodles were delicious! The place was very busy service may have been a little slower than usual."
+        },
+        {
+            "name": "Jimmy . Ng Tran",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Nice authentic Phở\nThey have beef / chicken noodles\nStock soup quite nice.\nBeef balls are a bit plain not much of the meat but may be that’s there signature beef ball 😅"
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        },
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "Gary Chang",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The Pho (Noodles) is good. The soup is amazing. Have it on a rainy day will be best.\nReasonable price and many locals eat here.\n\nA good stop over for a quick bite."
+        },
+        {
+            "name": "Jane",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Lots of local come here for breakfast and so did I. Light hearty broth with tender beef. Broth could have been more beefy, just my own preference though. Otherwise I love how there’s AC while you slurp on the yummy hot noodles!"
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Star Carter",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The chicken pho soup is tasty not masked by excess seasoning and spices, can clearly taste the sweetness and flavour of chicken. The pho or rice noodle texture is very good too, long strands of pho, cooked just right to retain slight chewiness and bounce in the noodle. The chicken meat is tender and moist too. However, the shop is quite messy and the kitchen doesn’t look sanitary, the staff who prepared our noodle was smoking and he did not wash his hands before grabbing the ingredients with his bare hands."
+        },
+        {
+            "name": "Lawrence Ooley",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Good bowl of phở gà, reasonably priced, especially for D1. Only complaints were that there was not as much chicken in the soup as I would have liked,  and received only Thai basil as garnishments. Usually get sprouts and Sawtooth herb. They did have sliced garlic cloves, chilies and jalapeños however. The noodles were delicious! The place was very busy service may have been a little slower than usual."
+        },
+        {
+            "name": "Jimmy . Ng Tran",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Nice authentic Phở\nThey have beef / chicken noodles\nStock soup quite nice.\nBeef balls are a bit plain not much of the meat but may be that’s there signature beef ball 😅"
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        },
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "Gary Chang",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The Pho (Noodles) is good. The soup is amazing. Have it on a rainy day will be best.\nReasonable price and many locals eat here.\n\nA good stop over for a quick bite."
+        },
+        {
+            "name": "Jane",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Lots of local come here for breakfast and so did I. Light hearty broth with tender beef. Broth could have been more beefy, just my own preference though. Otherwise I love how there’s AC while you slurp on the yummy hot noodles!"
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Star Carter",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The chicken pho soup is tasty not masked by excess seasoning and spices, can clearly taste the sweetness and flavour of chicken. The pho or rice noodle texture is very good too, long strands of pho, cooked just right to retain slight chewiness and bounce in the noodle. The chicken meat is tender and moist too. However, the shop is quite messy and the kitchen doesn’t look sanitary, the staff who prepared our noodle was smoking and he did not wash his hands before grabbing the ingredients with his bare hands."
+        },
+        {
+            "name": "Lawrence Ooley",
+            "time": "a year ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Good bowl of phở gà, reasonably priced, especially for D1. Only complaints were that there was not as much chicken in the soup as I would have liked,  and received only Thai basil as garnishments. Usually get sprouts and Sawtooth herb. They did have sliced garlic cloves, chilies and jalapeños however. The noodles were delicious! The place was very busy service may have been a little slower than usual."
+        },
+        {
+            "name": "Jimmy . Ng Tran",
+            "time": "a year ago",
+            "rating": "3 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Nice authentic Phở\nThey have beef / chicken noodles\nStock soup quite nice.\nBeef balls are a bit plain not much of the meat but may be that’s there signature beef ball 😅"
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        }
+    ],
+    "newest_reviews": [
+        {
+            "name": "Duc Duy Bui",
+            "time": "a week ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "The pho broth is delicious, rich, not fatty.\nHowever, the restaurant is a bit smelly."
+        },
+        {
+            "name": "Anh Nguyen",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "On the picture is a bowl of corned beef pho, rich in flavor and accompanied by a lot of meat.\n\nOne morning, making a bowl of pho and a poached egg is enough of a sobering combo. The stir fry here is a bit small but has a crispy texture so when dipped in broth to eat, it is very flavorful.\n\nThe restaurant opens quite late, so if you crave a bowl of pho late at night, you should try it ☺️"
+        },
+        {
+            "name": "Bách Chiến",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The pho is edible, there is air conditioning, but the atmosphere is only 3 stars. There is convenient parking!"
+        },
+        {
+            "name": "Tan Xuan",
+            "time": "3 weeks ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "4",
+            "review": "Location is quite good, cooking is quite good, crowded!"
+        },
+        {
+            "name": "Anh Tuấn Nguyễn",
+            "time": "a month ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Poor service\nDelicious pho"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "Min Senior",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "smash the pho. heirloom noodle soup. Eat well, everyone. Everyone should try turtle rib beef."
+        },
+        {
+            "name": "Kh Ntd",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "It's great with stir-fried pho. Characteristics of Nam Dinh pho"
+        },
+        {
+            "name": "Duc Duy Bui",
+            "time": "a week ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "The pho broth is delicious, rich, not fatty.\nHowever, the restaurant is a bit smelly."
+        },
+        {
+            "name": "Anh Nguyen",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "On the picture is a bowl of corned beef pho, rich in flavor and accompanied by a lot of meat.\n\nOne morning, making a bowl of pho and a poached egg is enough of a sobering combo. The stir fry here is a bit small but has a crispy texture so when dipped in broth to eat, it is very flavorful.\n\nThe restaurant opens quite late, so if you crave a bowl of pho late at night, you should try it ☺️"
+        },
+        {
+            "name": "Bách Chiến",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The pho is edible, there is air conditioning, but the atmosphere is only 3 stars. There is convenient parking!"
+        },
+        {
+            "name": "Tan Xuan",
+            "time": "3 weeks ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "4",
+            "review": "Location is quite good, cooking is quite good, crowded!"
+        },
+        {
+            "name": "Anh Tuấn Nguyễn",
+            "time": "a month ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Poor service\nDelicious pho"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "Min Senior",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "smash the pho. heirloom noodle soup. Eat well, everyone. Everyone should try turtle rib beef."
+        },
+        {
+            "name": "Kh Ntd",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "It's great with stir-fried pho. Characteristics of Nam Dinh pho"
+        },
+        {
+            "name": "Duc Duy Bui",
+            "time": "a week ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "The pho broth is delicious, rich, not fatty.\nHowever, the restaurant is a bit smelly."
+        },
+        {
+            "name": "Anh Nguyen",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "On the picture is a bowl of corned beef pho, rich in flavor and accompanied by a lot of meat.\n\nOne morning, making a bowl of pho and a poached egg is enough of a sobering combo. The stir fry here is a bit small but has a crispy texture so when dipped in broth to eat, it is very flavorful.\n\nThe restaurant opens quite late, so if you crave a bowl of pho late at night, you should try it ☺️"
+        },
+        {
+            "name": "Bách Chiến",
+            "time": "2 weeks ago",
+            "rating": "5 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "3",
+            "review": "The pho is edible, there is air conditioning, but the atmosphere is only 3 stars. There is convenient parking!"
+        },
+        {
+            "name": "Tan Xuan",
+            "time": "3 weeks ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "3",
+            "atmosphere": "4",
+            "review": "Location is quite good, cooking is quite good, crowded!"
+        },
+        {
+            "name": "Anh Tuấn Nguyễn",
+            "time": "a month ago",
+            "rating": "4 stars",
+            "food": "4",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Poor service\nDelicious pho"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "Min Senior",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "smash the pho. heirloom noodle soup. Eat well, everyone. Everyone should try turtle rib beef."
+        },
+        {
+            "name": "Kh Ntd",
+            "time": "a month ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "It's great with stir-fried pho. Characteristics of Nam Dinh pho"
+        }
+    ],
+    "highest_rating_reviews": [
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        },
+        {
+            "name": "Trang Nguyen",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "N/A",
+            "review": "Best phở in town, I'll miss this place when I study abroad next year😭"
+        },
+        {
+            "name": "Thinh Nguyen",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Good foods but service staff was not. Serving time took too long and low quality"
+        },
+        {
+            "name": "Jesse Nguyen",
+            "time": "2 years ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "Great Hanoi flavor of Pho bo! Love the soup and the kumquat drink!"
+        },
+        {
+            "name": "tommy xu",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Decent pho. Luckily it was open during Tet"
+        },
+        {
+            "name": "KhacTam Do",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Will return! Tasty phở"
+        },
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        },
+        {
+            "name": "Trang Nguyen",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "N/A",
+            "review": "Best phở in town, I'll miss this place when I study abroad next year😭"
+        },
+        {
+            "name": "Thinh Nguyen",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Good foods but service staff was not. Serving time took too long and low quality"
+        },
+        {
+            "name": "Jesse Nguyen",
+            "time": "2 years ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "Great Hanoi flavor of Pho bo! Love the soup and the kumquat drink!"
+        },
+        {
+            "name": "tommy xu",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Decent pho. Luckily it was open during Tet"
+        },
+        {
+            "name": "KhacTam Do",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Will return! Tasty phở"
+        },
+        {
+            "name": "Jaber SA",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Discovered this place on Google Maps while searching for nearby food near my hotel. I was pleasantly surprised by the delicious broth and quality of meat. The variety of condiments provided was impressive, although I opted for a touch of chili oil and basil in my soup. Overall, the food was fantastic, and the cost was around $2."
+        },
+        {
+            "name": "David T",
+            "time": "5 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Very good phở tái 60k vnd. Also they set their AC to 24C excellent."
+        },
+        {
+            "name": "Trippy Bear",
+            "time": "4 years ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Tried the Pho Xao Chien Gion, and the taste is superb. Its kind of nice to have different style of Pho once in a while. But the normal beef Pho itself also very good. Tasty and sweet meat. Nice and well cooked broth, good portion, affordable price."
+        },
+        {
+            "name": "Dieu Bui",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "4",
+            "review": "Bát phở truyền thống khó tìm giữa lòng Sài Gòn!\nThe Pho here is really very traditional. If it is not a heirloom, it is difficult to cook such a delicious bowl of pho. Even Vietnamese people are not easy to find a Pho with such strong flavor as here. Maybe the service style is not up to your standards, but the taste of Pho here will be unforgettable.\nI am Vietnamese. I love my hometown food very much. And Pho is one of them."
+        },
+        {
+            "name": "Nam Thập Nhất",
+            "time": "3 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "5",
+            "review": "Ok"
+        },
+        {
+            "name": "Trang Nguyen",
+            "time": "6 months ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "5",
+            "atmosphere": "N/A",
+            "review": "Best phở in town, I'll miss this place when I study abroad next year😭"
+        },
+        {
+            "name": "Thinh Nguyen",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "2",
+            "atmosphere": "3",
+            "review": "Good foods but service staff was not. Serving time took too long and low quality"
+        },
+        {
+            "name": "Jesse Nguyen",
+            "time": "2 years ago",
+            "rating": "5 stars",
+            "food": "5",
+            "service": "4",
+            "atmosphere": "3",
+            "review": "Great Hanoi flavor of Pho bo! Love the soup and the kumquat drink!"
+        },
+        {
+            "name": "tommy xu",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Decent pho. Luckily it was open during Tet"
+        },
+        {
+            "name": "KhacTam Do",
+            "time": "a year ago",
+            "rating": "5 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Will return! Tasty phở"
+        }
+    ],
+    "lowest_rating_reviews": [
+        {
+            "name": "Kiet Nguyen",
+            "time": "7 months ago",
+            "rating": "1 star",
+            "food": "4",
+            "service": "1",
+            "atmosphere": "1",
+            "review": "The bowl of pho is ok, the taste is quite similar to northern pho (the broth has the flavor of chicken bones, not the beef flavor). The meat is relatively good, the small beef balls have a relatively good taste.\nThe service is very bad, no one comes in to ask, the conversation is short, unfriendly or somewhat annoying, even though it's not crowded, it takes 10 minutes to get a bowl of pho.\nThe space is large, but messy, 1 guest table in the back to cut onions, 1 guest table on the right to pour soy sauce.\nIt's okay to eat for a while, but I won't come back"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "phat le",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "1",
+            "atmosphere": "N/A",
+            "review": "The service staff is terrible, always trying to talk to customers. Especially the employee who dyed his hair and the fat girl in black, always had the attitude of wanting to chase away customers."
+        },
+        {
+            "name": "Hân Lê",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food, SUPER BAD SERVICE! From serving to protecting... the girl serving today's dishes was small but very cheeky, always with a resentful attitude, holding a plate of stir-fry and a glass of iced tea and dropping it on the table in front of the guests! DAD!!! YOU ARE SMALL BUT CONSIDERING OTHERS, I DON'T KNOW WHO IS BETTER THAN BEHAVIING SO ILLEGAL!!! The security guard sat with his legs resting on another car, calmly watching customers struggling to lead their own car with the mess blocked around...\nPRICE IS NOT TOO HIGH BUT NOR IS IT LOW THAT makes me feel like I have to beg!!!\n\nSUPER BAD! I stopped by in vain and thought I would find a familiar restaurant. Bye bye forever, I'm so sick of it!!!"
+        },
+        {
+            "name": "Hải Phong Nguyễn",
+            "time": "2 years ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The pho here is of average quality. Previously, the price was also affordable. But now, the price is a bit high compared to the quality of the restaurant!"
+        },
+        {
+            "name": "Thành Đạt Lâm",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Pho is okay to eat, only about 80% similar to northern pho. But the experience was very bad because the owner forgot her order. I ordered chicken thigh pho + fried rice + brown rice milk but I was served exactly 1 bowl of beef corn pho :) I thought the fried chicken pho and rice milk would come out later so I just ate the pho first, but after finishing the bowl of pho I still didn't see any food. It was brought out so I'm sure the restaurant had forgotten it. When it was time to pay, the owner didn't mention anything about the stir fry and water, meaning she completely forgot. The process of ordering, receiving a bowl of pho and eating the entire bowl of pho takes less than 10 minutes. Not even an apology :)\nNote that I arrived at the restaurant at 9:30 p.m., at that time there were only 2 other tables with customers. I wonder what the restaurant will be like when it's crowded :)"
+        },
+        {
+            "name": "Văn Dương Thiên Lam",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Good food but terrible service. My aunt is also old, her eyes are blurry and can't see small words. She counted the money with her phone and threw it on the table. She asked how much 3 or 4 was and didn't even bother to say it for me. She said she couldn't see the way. Borrow glasses from people at the table to watch for a while before paying. The shop's suggestion is that when I hand over the phone, I conveniently read the price by 1.\nAfter I finished paying, I asked for more, but after I answered, they didn't bring it up. When I called again, they ignored me. Not good experience."
+        },
+        {
+            "name": "Đức Đỗ Anh",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food and prices are too high compared to the average"
+        },
+        {
+            "name": "Kiet Nguyen",
+            "time": "7 months ago",
+            "rating": "1 star",
+            "food": "4",
+            "service": "1",
+            "atmosphere": "1",
+            "review": "The bowl of pho is ok, the taste is quite similar to northern pho (the broth has the flavor of chicken bones, not the beef flavor). The meat is relatively good, the small beef balls have a relatively good taste.\nThe service is very bad, no one comes in to ask, the conversation is short, unfriendly or somewhat annoying, even though it's not crowded, it takes 10 minutes to get a bowl of pho.\nThe space is large, but messy, 1 guest table in the back to cut onions, 1 guest table on the right to pour soy sauce.\nIt's okay to eat for a while, but I won't come back"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "phat le",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "1",
+            "atmosphere": "N/A",
+            "review": "The service staff is terrible, always trying to talk to customers. Especially the employee who dyed his hair and the fat girl in black, always had the attitude of wanting to chase away customers."
+        },
+        {
+            "name": "Hân Lê",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food, SUPER BAD SERVICE! From serving to protecting... the girl serving today's dishes was small but very cheeky, always with a resentful attitude, holding a plate of stir-fry and a glass of iced tea and dropping it on the table in front of the guests! DAD!!! YOU ARE SMALL BUT CONSIDERING OTHERS, I DON'T KNOW WHO IS BETTER THAN BEHAVIING SO ILLEGAL!!! The security guard sat with his legs resting on another car, calmly watching customers struggling to lead their own car with the mess blocked around...\nPRICE IS NOT TOO HIGH BUT NOR IS IT LOW THAT makes me feel like I have to beg!!!\n\nSUPER BAD! I stopped by in vain and thought I would find a familiar restaurant. Bye bye forever, I'm so sick of it!!!"
+        },
+        {
+            "name": "Hải Phong Nguyễn",
+            "time": "2 years ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The pho here is of average quality. Previously, the price was also affordable. But now, the price is a bit high compared to the quality of the restaurant!"
+        },
+        {
+            "name": "Thành Đạt Lâm",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Pho is okay to eat, only about 80% similar to northern pho. But the experience was very bad because the owner forgot her order. I ordered chicken thigh pho + fried rice + brown rice milk but I was served exactly 1 bowl of beef corn pho :) I thought the fried chicken pho and rice milk would come out later so I just ate the pho first, but after finishing the bowl of pho I still didn't see any food. It was brought out so I'm sure the restaurant had forgotten it. When it was time to pay, the owner didn't mention anything about the stir fry and water, meaning she completely forgot. The process of ordering, receiving a bowl of pho and eating the entire bowl of pho takes less than 10 minutes. Not even an apology :)\nNote that I arrived at the restaurant at 9:30 p.m., at that time there were only 2 other tables with customers. I wonder what the restaurant will be like when it's crowded :)"
+        },
+        {
+            "name": "Văn Dương Thiên Lam",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Good food but terrible service. My aunt is also old, her eyes are blurry and can't see small words. She counted the money with her phone and threw it on the table. She asked how much 3 or 4 was and didn't even bother to say it for me. She said she couldn't see the way. Borrow glasses from people at the table to watch for a while before paying. The shop's suggestion is that when I hand over the phone, I conveniently read the price by 1.\nAfter I finished paying, I asked for more, but after I answered, they didn't bring it up. When I called again, they ignored me. Not good experience."
+        },
+        {
+            "name": "Đức Đỗ Anh",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food and prices are too high compared to the average"
+        },
+        {
+            "name": "Kiet Nguyen",
+            "time": "7 months ago",
+            "rating": "1 star",
+            "food": "4",
+            "service": "1",
+            "atmosphere": "1",
+            "review": "The bowl of pho is ok, the taste is quite similar to northern pho (the broth has the flavor of chicken bones, not the beef flavor). The meat is relatively good, the small beef balls have a relatively good taste.\nThe service is very bad, no one comes in to ask, the conversation is short, unfriendly or somewhat annoying, even though it's not crowded, it takes 10 minutes to get a bowl of pho.\nThe space is large, but messy, 1 guest table in the back to cut onions, 1 guest table on the right to pour soy sauce.\nIt's okay to eat for a while, but I won't come back"
+        },
+        {
+            "name": "Manh Cuong Truong",
+            "time": "a month ago",
+            "rating": "1 star",
+            "food": "1",
+            "service": "1",
+            "atmosphere": "3",
+            "review": "The broth has the flavor of MSG. A terrible bowl of pho with a strong smell of spices."
+        },
+        {
+            "name": "phat le",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "1",
+            "atmosphere": "N/A",
+            "review": "The service staff is terrible, always trying to talk to customers. Especially the employee who dyed his hair and the fat girl in black, always had the attitude of wanting to chase away customers."
+        },
+        {
+            "name": "Hân Lê",
+            "time": "a year ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food, SUPER BAD SERVICE! From serving to protecting... the girl serving today's dishes was small but very cheeky, always with a resentful attitude, holding a plate of stir-fry and a glass of iced tea and dropping it on the table in front of the guests! DAD!!! YOU ARE SMALL BUT CONSIDERING OTHERS, I DON'T KNOW WHO IS BETTER THAN BEHAVIING SO ILLEGAL!!! The security guard sat with his legs resting on another car, calmly watching customers struggling to lead their own car with the mess blocked around...\nPRICE IS NOT TOO HIGH BUT NOR IS IT LOW THAT makes me feel like I have to beg!!!\n\nSUPER BAD! I stopped by in vain and thought I would find a familiar restaurant. Bye bye forever, I'm so sick of it!!!"
+        },
+        {
+            "name": "Hải Phong Nguyễn",
+            "time": "2 years ago",
+            "rating": "1 star",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "The pho here is of average quality. Previously, the price was also affordable. But now, the price is a bit high compared to the quality of the restaurant!"
+        },
+        {
+            "name": "Thành Đạt Lâm",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Pho is okay to eat, only about 80% similar to northern pho. But the experience was very bad because the owner forgot her order. I ordered chicken thigh pho + fried rice + brown rice milk but I was served exactly 1 bowl of beef corn pho :) I thought the fried chicken pho and rice milk would come out later so I just ate the pho first, but after finishing the bowl of pho I still didn't see any food. It was brought out so I'm sure the restaurant had forgotten it. When it was time to pay, the owner didn't mention anything about the stir fry and water, meaning she completely forgot. The process of ordering, receiving a bowl of pho and eating the entire bowl of pho takes less than 10 minutes. Not even an apology :)\nNote that I arrived at the restaurant at 9:30 p.m., at that time there were only 2 other tables with customers. I wonder what the restaurant will be like when it's crowded :)"
+        },
+        {
+            "name": "Văn Dương Thiên Lam",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Good food but terrible service. My aunt is also old, her eyes are blurry and can't see small words. She counted the money with her phone and threw it on the table. She asked how much 3 or 4 was and didn't even bother to say it for me. She said she couldn't see the way. Borrow glasses from people at the table to watch for a while before paying. The shop's suggestion is that when I hand over the phone, I conveniently read the price by 1.\nAfter I finished paying, I asked for more, but after I answered, they didn't bring it up. When I called again, they ignored me. Not good experience."
+        },
+        {
+            "name": "Đức Đỗ Anh",
+            "time": "a year ago",
+            "rating": "2 stars",
+            "food": "N/A",
+            "service": "N/A",
+            "atmosphere": "N/A",
+            "review": "Average food and prices are too high compared to the average"
+        }
+    ]
+}
