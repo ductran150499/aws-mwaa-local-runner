@@ -19,7 +19,7 @@ def get_location_info(driver, wait):
         location_info['address'] = driver.find_element(By.CSS_SELECTOR, '.Io6YTe').text.strip()
 
     except Exception as e:
-        print("Error fetching location info:", e)
+        print("Error fetching location info")
     
     return location_info
 
@@ -60,7 +60,7 @@ def get_opening_hours(driver, wait):
         return opening_hours
 
     except Exception as e:
-        print("Error fetching opening hours:", e)
+        print("Error fetching opening hours")
         return None
 
 # Hàm lấy thông tin giá tiền
@@ -90,7 +90,7 @@ def get_price_info(driver, wait):
         return price_info_list
 
     except Exception as e:
-        print("Error fetching price info:", e)
+        print("Error fetching price info")
         return None
 
 # Hàm lấy số liệu thống kê đánh giá
@@ -120,7 +120,7 @@ def get_review_stats(driver, wait):
         return review_stats
 
     except Exception as e:
-        print("Error fetching review stats:", e)
+        print("Error fetching review stats")
         return None
 
 # Hàm để chuyển qua tab "About" và thu thập thông tin bổ sung
@@ -145,7 +145,7 @@ def get_additional_info(driver, wait):
         return additional_info
 
     except Exception as e:
-        print("Error fetching additional info:", e)
+        print("Error fetching additional info")
         return None
 
 def click_with_js(driver, element):
@@ -175,7 +175,7 @@ def get_ratings(review):
             print("Atmosphere rating not found")
 
     except Exception as e:
-        print(f"Error fetching ratings: {e}")
+        print(f"Error fetching ratings")
 
     return food_rating, service_rating, atmosphere_rating
 
@@ -238,10 +238,10 @@ def get_user_reviews(driver, wait, sort_type):
                     'review': review.find_element(By.CSS_SELECTOR, 'span.wiI7pd').text.strip(), 
                 })
             except Exception as e:
-                print(f"Error fetching individual review: {e}")
+                print(f"Error fetching individual review")
     
     except Exception as e:
-        print("Error while fetching reviews:", e)
+        print("Error while fetching reviews")
     
     return user_reviews
 
@@ -310,7 +310,7 @@ def scrape_reviews_from_ggmaps(places_data):
             review_data = get_reviews_data(url, driver, wait)
             reviews_data.append(review_data)
     except Exception as e:
-        print(f"Error scraping Google Maps: {e}")
+        print(f"Error scraping Google Maps")
     finally:
         driver.quit()
     return reviews_data
