@@ -14,7 +14,7 @@ def remove_duplicates(ti) -> dict:
         dict: Dictionary of unique entries from crawled data.
     """
     # Retrieve data from XCom
-    data = ti.xcom_pull(key='crawl', task_ids='crawling.get_url')
+    data = ti.xcom_pull(key='crawl_reviews', task_ids='crawling_reviews.get_url')
 
     if data is None or not data:
         print("No data found in XCom.")

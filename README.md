@@ -13,6 +13,12 @@
 
 ## Setup Guide
 
+### 0. Install chrome webdriver
+- Check your current chrome version: eg: 130.0.6723.59
+- Find related platform webdriver URL https://googlechromelabs.github.io/chrome-for-testing/#stable
+- Replace URL with your chrome local version, eg: 130.0.6723.59 on MacOS M1 https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.59/mac-arm64/chromedriver-mac-arm64.zip
+- Run local `chromedriver` binary after download: `chromedriver --port=4444`
+
 ### 1. Install Docker
 - Follow the instructions to install Docker from the [Docker website](https://www.docker.com/).
 

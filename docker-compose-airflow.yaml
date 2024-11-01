@@ -15,7 +15,8 @@ x-airflow-common:
     _AIRFLOW_WWW_USER_USERNAME: airflow
     _AIRFLOW_WWW_USER_PASSWORD: airflow
     PYTHONPATH: /opt/airflow:/opt/airflow
-
+  extra_hosts:
+      - "host.docker.internal:host-gateway"
   user: "${AIRFLOW_UID:-50000}:0"
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
@@ -29,19 +30,6 @@ x-airflow-common:
         condition: service_healthy
     
 services:
-  selenium:
-    container_name: remote_firefoxdriver
-    image: selenium/standalone-firefox
-    environment:
-      - MOZ_HEADLESS=1
-      - SE_NODE_MAX_SESSIONS=5
-      - JAVA_OPTS=-XX:ActiveProcessorCount=5
-    ports:
-      - 4444:4444
-      - 7900:7900
-    restart: always
-    networks:
-      - ggmaps
 ### AIRFLOW WEBSERVER ###
   airflow-webserver:
     <<: *airflow
