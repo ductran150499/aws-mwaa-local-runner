@@ -4,9 +4,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 
 from driver_utils import create_driver
-
+ 
 import time as time
 import re
 import csv
@@ -24,7 +27,7 @@ def get_location_info(driver, wait):
     location_info = {}
     try:
         location_info['title'] = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.DUwDvf'))).text.strip()
-        location_info['address'] = driver.find_element(By.CSS_SELECTOR, '.Io6YTe').text.strip()
+        location_info['address'] = driver.find_element(By.CSS_SELECTOR, '.Io6YTe.kR99db.fdkmkc').text.strip()
 
     except Exception as e:
         pass
@@ -43,27 +46,42 @@ def extract_lat_long(url):
 # Hàm lấy thông tin giờ mở cửa
 def get_opening_hours(driver, wait):
     try:
-        expand_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'span[aria-label="Show open hours for the week"]')))
-        expand_button.click()
+        actions = ActionChains(driver)
+        scroll_attempts = 0
+        max_scroll_attempts = 1 
+
+        while scroll_attempts < max_scroll_attempts:
+            actions.send_keys(Keys.PAGE_DOWN).perform() 
+            time.sleep(1) 
+            scroll_attempts += 1  
+
+        expand_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'span.puWIL.hKrmvd'))) 
+        actions = ActionChains(driver)
+        actions.move_to_element(expand_button).click().perform()
+
         time.sleep(2)
 
         open_hours_element = driver.find_element(By.CSS_SELECTOR, 'div.t39EBf.GUrTXd')
         
         aria_label_text = open_hours_element.get_attribute('aria-label')
 
-        days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
         hour_info_list = aria_label_text.split(';')
-
-        hour_info_list[-1] = hour_info_list[-1].split(". Hide open hours for the week")[0]
 
         opening_hours = {}
 
-        for i, day in enumerate(days_of_week):
-            if i < len(hour_info_list):
-                day_info = hour_info_list[i].strip()
-                day_name, hours = day_info.split(", ")
-                opening_hours[day_name] = hours
+        if "Hide open hours for the week" in hour_info_list[-1]:
+            hour_info_list[-1] = hour_info_list[-1].split(". Hide open hours for the week")[0]
+
+        for day_info in hour_info_list:
+            day_info = day_info.strip()
+            day_name, hours = day_info.split(", ", 1)
+            
+            if ", " in hours:
+                hours_list = [h.strip() for h in hours.split(", ")]
+            else:
+                hours_list = [hours.strip()]
+        
+            opening_hours[day_name] = hours_list
 
         return opening_hours
 
@@ -73,8 +91,9 @@ def get_opening_hours(driver, wait):
 # Hàm lấy thông tin giá tiền
 def get_price_info(driver, wait):
     try:
-        expand_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'span.IgTTAf')))
-        expand_button.click()
+        expand_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'span.IgTTAf.LkEmWe')))
+        actions = ActionChains(driver)
+        actions.move_to_element(expand_button).click().perform()
         time.sleep(2)
 
         price_rows = driver.find_elements(By.CSS_SELECTOR, 'table.rqRH4d tr')
@@ -247,6 +266,13 @@ def get_user_reviews(driver, wait, sort_type):
 def get_reviews_data(url, driver, wait):  
     driver.get(url)
 
+    actions = ActionChains(driver)
+    title_element  = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.DUwDvf')))
+    actions.move_to_element(title_element).perform()  
+    for _ in range(1): 
+        actions.send_keys(Keys.PAGE_DOWN).perform()
+        time.sleep(2) 
+
     location_info = get_location_info(driver, wait)
 
     # Tìm vĩ độ và kinh độ trong URL (thường nằm sau "@")
@@ -297,24 +323,6 @@ def get_reviews_data(url, driver, wait):
 
     return location_info
     
-def scrape_reviews_from_ggmaps(places_data):
-    reviews_data = []
-    try:
-        driver = create_driver()
-        wait = WebDriverWait(driver, 15)
-        
-        for i, place in enumerate(places_data):
-            progress = (i + 1) / len(places_data)
-            print(f"({i + 1}/{len(places_data)}) [{progress:.2%}]: Scraping reviews for {place[3]}")
-            url = place[4]
-            review_data = get_reviews_data(url, driver, wait)
-            reviews_data.append(review_data)
-    except Exception as e:
-        pass
-    finally:
-        driver.quit()
-    return reviews_data
-
 def run(chunk):
     locations = []
     
@@ -337,28 +345,20 @@ def run(chunk):
         start = 0
         end = chunk_size
     elif chunk == 1:
-        start = chunk_size
+        start = chunk_size + 1
         end = 2 * chunk_size
     elif chunk == 2:
-        start = 2 * chunk_size
+        start = 2 * chunk_size + 1
         end = 3 * chunk_size
     else:
-        start = 3 * chunk_size
-        end = count
-
-    reviews_data = []
+        start = 3 * chunk_size + 1
+        end = count - 1
     
     save_part = 'all' if chunk == None else chunk
     save_file_name = f'backups/code/data/reviews_data_{save_part}.json'
-    
-    try:
-        with open(save_file_name, 'r') as file:
-            data = json.load(file)
-            last_index = data[-1]['index']
-            review_data = data
-    except Exception as e:
-        pass
-        last_index = -1
+    last_index_filePath = f'backups/code/data/last_index_{save_part}.json'
+
+    last_index = get_last_index(last_index_filePath)
         
     print(f"Start={start}, End={end}, Last Index={last_index}, save to {save_file_name}")
 
@@ -371,8 +371,15 @@ def run(chunk):
         dt = utc_dt.astimezone()
         print(f"Index={i}, Total={end - start}, progress={progress:.2%}, time={dt}: Scraping reviews for {location[3]}")
         url = location[4]
-        driver = create_driver()
+
+        options = webdriver.ChromeOptions()
+        options.add_argument('--ignore-certificate-errors')
+        options.add_argument('--ignore-ssl-errors')
+        options.add_argument('headless')  # Chế độ headless (chạy không cần giao diện)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
         wait = WebDriverWait(driver, 15)
+
         review_data = get_reviews_data(url, driver, wait)
         review_data['category'] = location[0]
         review_data['location'] = location[1]
@@ -380,13 +387,27 @@ def run(chunk):
         review_data['url'] = url
         review_data['index'] = i
         driver.quit()
-        reviews_data.append(review_data)
 
         print(f"Backup to json file at index={i}")
-        with open(save_file_name, 'w', encoding='utf-8') as f:
-            json.dump(reviews_data, f, ensure_ascii=False, indent=4)
-        
-    print(f"Scraped {len(reviews_data)} locations, expected {len(locations)}, saved to {save_file_name}")
+        append_to_json_line_by_line(review_data, save_file_name)
+
+        save_last_index(i, last_index_filePath)
+
+def append_to_json_line_by_line(new_data, file_path):
+    with open(file_path, 'a', encoding='utf-8') as file: 
+        file.write(json.dumps(new_data, ensure_ascii=False) + '\n')
+
+def get_last_index(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            return data.get('last_index', -1)
+    except FileNotFoundError:
+        return -1  
+
+def save_last_index(index, file_path):
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump({"last_index": index}, file)
 
 if __name__ == "__main__":
     chunk = args.chunk
