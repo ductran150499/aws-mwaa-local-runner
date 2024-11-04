@@ -11,6 +11,7 @@ import time as time
 import re
 import csv
 import json
+import os
 
 import argparse
 
@@ -25,7 +26,7 @@ def get_location_info(driver, wait):
         location_info['address'] = driver.find_element(By.CSS_SELECTOR, '.Io6YTe').text.strip()
 
     except Exception as e:
-        print("Error fetching location info")
+        pass
     
     return location_info
 
@@ -66,7 +67,6 @@ def get_opening_hours(driver, wait):
         return opening_hours
 
     except Exception as e:
-        print("Error fetching opening hours")
         return None
 
 # Hàm lấy thông tin giá tiền
@@ -96,7 +96,6 @@ def get_price_info(driver, wait):
         return price_info_list
 
     except Exception as e:
-        print("Error fetching price info")
         return None
 
 # Hàm lấy số liệu thống kê đánh giá
@@ -126,7 +125,6 @@ def get_review_stats(driver, wait):
         return review_stats
 
     except Exception as e:
-        print("Error fetching review stats")
         return None
 
 # Hàm để chuyển qua tab "About" và thu thập thông tin bổ sung
@@ -151,7 +149,6 @@ def get_additional_info(driver, wait):
         return additional_info
 
     except Exception as e:
-        print("Error fetching additional info")
         return None
 
 def click_with_js(driver, element):
@@ -168,20 +165,18 @@ def get_ratings(review):
         try:
             food_rating = rating_container.find_element(By.XPATH, './/span[b[text()="Food:"]]').text.split(':')[-1].strip()
         except Exception as e:
-            print("Food rating not found")
+            pass
 
         try:
             service_rating = rating_container.find_element(By.XPATH, './/span[b[text()="Service:"]]').text.split(':')[-1].strip()
         except Exception as e:
-            print("Service rating not found")
-
+            pass
         try:
             atmosphere_rating = rating_container.find_element(By.XPATH, './/span[b[text()="Atmosphere:"]]').text.split(':')[-1].strip()
         except Exception as e:
-            print("Atmosphere rating not found")
-
+            pass
     except Exception as e:
-        print(f"Error fetching ratings")
+        pass
 
     return food_rating, service_rating, atmosphere_rating
 
@@ -230,7 +225,7 @@ def get_user_reviews(driver, wait, sort_type):
                         see_more_button.click()
                         time.sleep(1)
                 except Exception as e:
-                    print("See more button not found or not clickable")
+                    pass
 
                 food_rating, service_rating, atmosphere_rating = get_ratings(review)
 
@@ -244,10 +239,10 @@ def get_user_reviews(driver, wait, sort_type):
                     'review': review.find_element(By.CSS_SELECTOR, 'span.wiI7pd').text.strip(), 
                 })
             except Exception as e:
-                print(f"Error fetching individual review")
+                pass
     
     except Exception as e:
-        print("Error while fetching reviews")
+        pass
     
     return user_reviews
 
@@ -317,7 +312,7 @@ def scrape_reviews_from_ggmaps(places_data):
             review_data = get_reviews_data(url, driver, wait)
             reviews_data.append(review_data)
     except Exception as e:
-        print(f"Error scraping Google Maps")
+        pass
     finally:
         driver.quit()
     return reviews_data
@@ -335,25 +330,46 @@ def run(chunk):
     count = len(locations)
     chunk_size = count // 4
     
+    start = 0
+    end = count
+    
     if chunk == None:
         print("No chunk provided, run all locations")
     elif chunk == 0:
-        locations = locations[:chunk_size]
+        start = 0
+        end = chunk_size
     elif chunk == 1:
-        locations = locations[chunk_size:2 * chunk_size]
+        start = chunk_size
+        end = 2 * chunk_size
     elif chunk == 2:
-        locations = locations[2 * chunk_size:3 * chunk_size]
+        start = 2 * chunk_size
+        end = 3 * chunk_size
     else:
-        locations = locations[3 * chunk_size:]
+        start = 3 * chunk_size
+        end = count
 
     reviews_data = []
     
     save_part = 'all' if chunk == None else chunk
     save_file_name = f'backups/code/data/reviews_data_{save_part}.json'
+    
+    try:
+        with open(save_file_name, 'r') as file:
+            data = json.load(file)
+            last_index = data[-1]['index']
+            review_data = data
+    except Exception as e:
+        pass
+        last_index = -1
+        
+    print(f"Start={start}, End={end}, Last Index={last_index}, save to {save_file_name}")
 
     for i in range(len(locations)):
+        if (i < start) or (i >= end) or (i <= last_index):
+            continue
         location = locations[i]
-        print(f"({i + 1}/{len(locations)}): Scraping reviews for {location[3]}")
+        progress = (i + 1 - start) / (end - start)
+        print(f"Index={i}, Total={end - start}, progress={progress:.2%}: Scraping reviews for {location[3]}")
         url = location[4]
         driver = create_driver()
         wait = WebDriverWait(driver, 15)
@@ -362,17 +378,13 @@ def run(chunk):
         review_data['location'] = location[1]
         review_data['keyword'] = location[2]
         review_data['url'] = url
+        review_data['index'] = i
         driver.quit()
         reviews_data.append(review_data)
-        
-        if i % 5 == 0:
-            print(f"Backup to json file at {i + 1} locations")
-            with open(save_file_name, 'w', encoding='utf-8') as f:
-                json.dump(reviews_data, f, ensure_ascii=False, indent=4)
-        
-    # write review data to json file
-    with open(save_file_name, 'w', encoding='utf-8') as f:
-        json.dump(reviews_data, f, ensure_ascii=False, indent=4)
+
+        print(f"Backup to json file at index={i}")
+        with open(save_file_name, 'w', encoding='utf-8') as f:
+            json.dump(reviews_data, f, ensure_ascii=False, indent=4)
         
     print(f"Scraped {len(reviews_data)} locations, expected {len(locations)}, saved to {save_file_name}")
 
