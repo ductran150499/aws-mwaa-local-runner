@@ -12,6 +12,7 @@ import re
 import csv
 import json
 import os
+from datetime import datetime, timezone
 
 import argparse
 
@@ -366,7 +367,9 @@ def run(chunk):
             continue
         location = locations[i]
         progress = (i + 1 - start) / (end - start)
-        print(f"Index={i}, Total={end - start}, progress={progress:.2%}: Scraping reviews for {location[3]}")
+        utc_dt = datetime.now(timezone.utc)
+        dt = utc_dt.astimezone()
+        print(f"Index={i}, Total={end - start}, progress={progress:.2%}, time={dt}: Scraping reviews for {location[3]}")
         url = location[4]
         driver = create_driver()
         wait = WebDriverWait(driver, 15)
