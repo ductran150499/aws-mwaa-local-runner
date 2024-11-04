@@ -209,13 +209,10 @@ def get_user_reviews(driver, wait, sort_type):
             time.sleep(2)  
 
             new_review_container = driver.find_elements(By.CSS_SELECTOR, 'div.jftiEf.fontBodyMedium')
-            print("Len new_review_container:", len(new_review_container))
 
             if len(new_review_container) > 0:
                 total_review_container.extend(new_review_container)  
             scroll_attempts += 1  
-        
-        print("Len  total_review_container:", len(total_review_container))
 
         for review in total_review_container:
             try:
