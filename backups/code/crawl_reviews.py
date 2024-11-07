@@ -20,7 +20,8 @@ from datetime import datetime, timezone
 import argparse
 
 parser = argparse.ArgumentParser("Run crawlings by chunks")
-parser.add_argument("chunk", help="An integer: [0, 1, 2, 3]", type=int)
+parser.add_argument("chunk", help="An integer: [0, 1, 2, 3,....]", type=int)
+parser.add_argument("num_chunk", help="An integer: [4, 8, 12]", type=int)
 args = parser.parse_args()
 
 def get_location_info(driver, wait):
@@ -323,7 +324,7 @@ def get_reviews_data(url, driver, wait):
 
     return location_info
     
-def run(chunk):
+def run(chunk, num_chunks=8):
     locations = []
     
     with(open('backups/code/data/locations.csv', 'r', encoding='utf-8')) as f:
@@ -334,25 +335,18 @@ def run(chunk):
     # Remove the header
     locations = locations[1:]
     count = len(locations)
-    chunk_size = count // 4
+    chunk_size = count // num_chunks
     
     start = 0
     end = count
     
     if chunk == None:
         print("No chunk provided, run all locations")
-    elif chunk == 0:
-        start = 0
-        end = chunk_size
-    elif chunk == 1:
-        start = chunk_size + 1
-        end = 2 * chunk_size
-    elif chunk == 2:
-        start = 2 * chunk_size + 1
-        end = 3 * chunk_size
     else:
-        start = 3 * chunk_size + 1
-        end = count - 1
+        start = chunk * chunk_size
+        end = (chunk + 1) * chunk_size
+        if chunk == num_chunks - 1:
+            end = count
     
     save_part = 'all' if chunk == None else chunk
     save_file_name = f'backups/code/data/reviews_data_{save_part}.json'
@@ -369,7 +363,7 @@ def run(chunk):
         progress = (i + 1 - start) / (end - start)
         utc_dt = datetime.now(timezone.utc)
         dt = utc_dt.astimezone()
-        print(f"Index={i}, Total={end - start}, progress={progress:.2%}, time={dt}: Scraping reviews for {location[3]}")
+        print(f"Chunk={chunk}, Index={i}, Total={end - start}, progress={progress:.2%}, time={dt}: Scraping reviews for {location[3]}")
         url = location[4]
 
         options = webdriver.ChromeOptions()
@@ -411,4 +405,6 @@ def save_last_index(index, file_path):
 
 if __name__ == "__main__":
     chunk = args.chunk
-    run(chunk)
+    num_chunk = args.num_chunk
+    print(f"Run chunk={chunk}, num_chunk={num_chunk}")
+    run(chunk, num_chunk)
