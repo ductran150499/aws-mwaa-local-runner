@@ -9,7 +9,7 @@ from ggmaps.driver_utils import create_driver
 
 import time as time
 
-def scrape_google_maps(location, category, results_limit=20):
+def scrape_google_maps(location, category, results_limit=5):
     places_data = []
     try:
         driver = create_driver()

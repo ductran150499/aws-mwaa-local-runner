@@ -39,6 +39,7 @@ services:
             airflow webserver &&
             pip install -r opt/airflow/plugins/requirements.txt"
     container_name: airflow-webserver
+    platform: linux/amd64
     ports:
       - 8080:8080
     healthcheck:
@@ -59,6 +60,7 @@ services:
       airflow scheduler &&
       pip install -r opt/airflow/plugins/requirements.txt"
     container_name: airflow_scheduler
+    platform: linux/amd64
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -72,6 +74,7 @@ services:
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: pgadmin
+    platform: linux/amd64
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@gmail.com
       PGADMIN_DEFAULT_PASSWORD: admin12345
@@ -86,6 +89,7 @@ services:
   postgres:
     image: postgres:12.20-alpine3.20
     container_name: postgres
+    platform: linux/amd64
     ports:
       - 5434:5432
     environment:
@@ -107,6 +111,7 @@ services:
   minio:
     image: minio/minio:RELEASE.2024-09-22T00-33-43Z.fips
     container_name: minio
+    platform: linux/amd64
     ports:
       - 9000:9000
       - 9001:9001

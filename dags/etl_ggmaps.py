@@ -29,14 +29,14 @@ locations = [
     # "Bình Tân, TP. Hồ Chí Minh",
 ]
 categories = [
-    "món ăn Việt Nam",
+    # "món ăn Việt Nam",
     # "món ăn Hàn Quốc",
     # "món ăn Nhật Bản",
     # "món ăn Trung Quốc",
     # "món ăn Thái Lan",
     # "món ăn Ấn Độ",
     # "món chay",
-    # "quán cà phê",
+    "quán cà phê",
     # "phở",
     # "bún bò",
     # "bánh mì",
@@ -72,7 +72,7 @@ with DAG(
         start_date=datetime(year=2024, 
                             month=9, 
                             day=28),
-        schedule_interval='30 9 * * *',
+        schedule_interval='30 9 * * 1',
         catchup=False) as dag:
 
     crawl_locations = crawl_locations_tasks(locations, categories)
